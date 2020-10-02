@@ -2,7 +2,18 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    dic = {}
+    thresh = len(arrays)
+    
+    result = []
+    for i in arrays:
+        for j in i:
+            if j in dic:
+                dic[j] += 1
+                if dic[j] == thresh:
+                    result.append(j)
+            else:
+                dic[j] = 1
 
     return result
 
